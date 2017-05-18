@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUPIT CHAT - Don't FA anymore</title>
+    @Styles.Render("~/Content/style")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header class="header">
+        <div class="logo left">
+            <a href="@Url.Action("Index", "Home")"><img src="/images/system/1-02.png"></a>
+        </div>
+        <div class="menu-top right">
+            <ul class="menu-top-lst">
+                <li><a href="@Url.Action("Index", "Search")">TÌM KIẾM</a></li>
+                <li><a href="@Url.Action("Index", "Messenger")">TRÒ CHUYỆN</a></li>
+                <li><a href="@Url.Action("Index", "Moment")">KHOẢNH KHẮC ĐẸP</a></li>
+                @Html.Partial("_LoginPartial")
+            </ul>
+        </div>
+        <div class="clr"></div>
+    </header>
+
+    @RenderBody()
+    <div class="footer">
+        <img src="/images/system/1-08.png" />
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
